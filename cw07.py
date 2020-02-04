@@ -11,7 +11,7 @@ else:
             if (tipo == "s"):
                 read = float(val)
             if (tipo == "p"):
-                read = float(1/val)
+                read = float(1/float(val))
             resistors.insert(n, read)
         n += 1
     print(sum(resistors))
