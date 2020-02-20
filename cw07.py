@@ -1,5 +1,6 @@
 tipo = str(input())
 resistors = []
+respar = 0
 val = 0
 n = 0
 if (tipo != "s" and tipo != "p"):
@@ -17,4 +18,8 @@ else:
     if (tipo == "s"):
         print(sum(resistors))
     else:
-        print(1/sum(resistors))
+        for i in resistors:
+            resa = resistors[i]
+            resb = float(1/resa)
+            respar += resb
+        print(1/respar)
